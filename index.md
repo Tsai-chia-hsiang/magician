@@ -578,6 +578,7 @@
 <h4 id="egg"></h4>
 
 #### EM異色眼同步者 (EM 異色眼)
+
 <img src="main/EM異色眼同步者.jpg" width="200"/>
 
 |暗|魔法使族|協調|L2|ATK 200|DEF 600|
@@ -613,6 +614,7 @@
 <h4 id="oddeyes_fusionguy"><h4>
 
 #### EM異色眼融變者 (EM 異色眼)
+
 <img src="main/EM異色眼融變者.jpg" width="200"/>
 
 |暗|魔法使族|L8|ATK 2000|DEF 2600|
@@ -647,6 +649,7 @@
 <h4 id="revolutionary"><h4>
 
 #### 超天新龍-異色眼革命龍 (異色眼)
+
 <img src="main/超天新龍-異色眼革命龍.jpg" width="200"/>
 
 |光|龍族|L12|ATK ?|DEF ?|
@@ -689,6 +692,7 @@
 <h4 id="honorP"><h4>
 
 #### 龍劍士榮光擺動P (靈擺)
+
 <img src="main/龍劍士榮光擺動P.jpg" width="200"/>
 
 |光|龍族|協調|L4|ATK 1850|DEF 0|
