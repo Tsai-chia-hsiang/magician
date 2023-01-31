@@ -1,1 +1,1 @@
-Please goto https://tsai-chia-hsiang.github.io/magician_ygoocg.github.io/ to view the pages.
+Please goto https://tsai-chia-hsiang.github.io/magician/ to view the pages.
