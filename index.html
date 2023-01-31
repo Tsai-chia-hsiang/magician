@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>&#x9b54;&#x8853;&#x5e2b; &lpar;SD31-based&rpar; &#x724c;&#x7d44;&#x4ecb;&#x7d39;</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension bierner.markdown-preview-github-styles */
+html,
+body,
+.github-markdown-body {
+    padding: 0 !important;
+    max-width: auto !important;
+}
+
+.github-markdown-body {
+    background-color: var(--color-canvas-default);
+    color: var(--color-fg-default);
+}
+
+.github-markdown-body {
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 100% !important;
+}
+
+.github-markdown-content {
+    padding: 32px !important;
+    max-width: 980px;
+    min-width: 200px;
+    margin: 0 auto;
+}
+
+
+.vscode-body.scrollBeyondLastLine {
+    margin-bottom: 0;
+}
+.vscode-body.scrollBeyondLastLine .github-markdown-body {
+    padding-bottom: calc(100vh + 10px) !important;
+}
+
+.github-markdown-body blockquote {
+    background-color: initial;
+}
+
+.github-markdown-body pre {
+    color: initial;
+}
+
+.github-markdown-body code {
+    color: inherit;
+}
+
+.github-markdown-body pre code {
+    color: initial;
+}
+
+.github-markdown-body code > div {
+    background: none
+}
+
+.github-markdown-body.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.github-markdown-body p,
+.github-markdown-body blockquote,
+.github-markdown-body ul,
+.github-markdown-body ol,
+.github-markdown-body dl,
+.github-markdown-body table,
+.github-markdown-body pre {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* Generated from 'node_modules/github-markdown-css/github-markdown.css' */
+
+.github-markdown-light,
+.vscode-body.vscode-light .github-markdown-auto {
+  color-scheme: light;
+  --color-prettylights-syntax-comment: #6e7781;
+  --color-prettylights-syntax-constant: #0550ae;
+  --color-prettylights-syntax-entity: #8250df;
+  --color-prettylights-syntax-storage-modifier-import: #24292f;
+  --color-prettylights-syntax-entity-tag: #116329;
+  --color-prettylights-syntax-keyword: #cf222e;
+  --color-prettylights-syntax-string: #0a3069;
+  --color-prettylights-syntax-variable: #953800;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+  --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+  --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+  --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+  --color-prettylights-syntax-carriage-return-bg: #cf222e;
+  --color-prettylights-syntax-string-regexp: #116329;
+  --color-prettylights-syntax-markup-list: #3b2300;
+  --color-prettylights-syntax-markup-heading: #0550ae;
+  --color-prettylights-syntax-markup-italic: #24292f;
+  --color-prettylights-syntax-markup-bold: #24292f;
+  --color-prettylights-syntax-markup-deleted-text: #82071e;
+  --color-prettylights-syntax-markup-deleted-bg: #FFEBE9;
+  --color-prettylights-syntax-markup-inserted-text: #116329;
+  --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+  --color-prettylights-syntax-markup-changed-text: #953800;
+  --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+  --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+  --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+  --color-prettylights-syntax-meta-diff-range: #8250df;
+  --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+  --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+  --color-fg-default: #24292f;
+  --color-fg-muted: #57606a;
+  --color-fg-subtle: #6e7781;
+  --color-canvas-default: #ffffff;
+  --color-canvas-subtle: #f6f8fa;
+  --color-border-default: #d0d7de;
+  --color-border-muted: hsla(210,18%,87%,1);
+  --color-neutral-muted: rgba(175,184,193,0.2);
+  --color-accent-fg: #0969da;
+  --color-accent-emphasis: #0969da;
+  --color-danger-fg: #cf222e;
+}
+
+.github-markdown-dark,
+.vscode-body.vscode-dark .github-markdown-auto {
+  color-scheme: dark;
+  --color-prettylights-syntax-comment: #8b949e;
+  --color-prettylights-syntax-constant: #79c0ff;
+  --color-prettylights-syntax-entity: #d2a8ff;
+  --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+  --color-prettylights-syntax-entity-tag: #7ee787;
+  --color-prettylights-syntax-keyword: #ff7b72;
+  --color-prettylights-syntax-string: #a5d6ff;
+  --color-prettylights-syntax-variable: #ffa657;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+  --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+  --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+  --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+  --color-prettylights-syntax-carriage-return-bg: #b62324;
+  --color-prettylights-syntax-string-regexp: #7ee787;
+  --color-prettylights-syntax-markup-list: #f2cc60;
+  --color-prettylights-syntax-markup-heading: #1f6feb;
+  --color-prettylights-syntax-markup-italic: #c9d1d9;
+  --color-prettylights-syntax-markup-bold: #c9d1d9;
+  --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+  --color-prettylights-syntax-markup-deleted-bg: #67060c;
+  --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+  --color-prettylights-syntax-markup-inserted-bg: #033a16;
+  --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+  --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+  --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+  --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+  --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+  --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+  --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+  --color-fg-default: #c9d1d9;
+  --color-fg-muted: #8b949e;
+  --color-fg-subtle: #484f58;
+  --color-canvas-default: #0d1117;
+  --color-canvas-subtle: #161b22;
+  --color-border-default: #30363d;
+  --color-border-muted: #21262d;
+  --color-neutral-muted: rgba(110,118,129,0.4);
+  --color-accent-fg: #58a6ff;
+  --color-accent-emphasis: #1f6feb;
+  --color-danger-fg: #f85149;
+}
+
+@media (prefers-color-scheme: dark) {
+  .github-markdown-system {
+    color-scheme: dark;
+    --color-prettylights-syntax-comment: #8b949e;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #c9d1d9;
+    --color-prettylights-syntax-markup-bold: #c9d1d9;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-fg-default: #c9d1d9;
+    --color-fg-muted: #8b949e;
+    --color-fg-subtle: #484f58;
+    --color-canvas-default: #0d1117;
+    --color-canvas-subtle: #161b22;
+    --color-border-default: #30363d;
+    --color-border-muted: #21262d;
+    --color-neutral-muted: rgba(110,118,129,0.4);
+    --color-accent-fg: #58a6ff;
+    --color-accent-emphasis: #1f6feb;
+    --color-danger-fg: #f85149;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .github-markdown-system {
+    color-scheme: light;
+    --color-prettylights-syntax-comment: #6e7781;
+    --color-prettylights-syntax-constant: #0550ae;
+    --color-prettylights-syntax-entity: #8250df;
+    --color-prettylights-syntax-storage-modifier-import: #24292f;
+    --color-prettylights-syntax-entity-tag: #116329;
+    --color-prettylights-syntax-keyword: #cf222e;
+    --color-prettylights-syntax-string: #0a3069;
+    --color-prettylights-syntax-variable: #953800;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+    --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+    --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+    --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+    --color-prettylights-syntax-carriage-return-bg: #cf222e;
+    --color-prettylights-syntax-string-regexp: #116329;
+    --color-prettylights-syntax-markup-list: #3b2300;
+    --color-prettylights-syntax-markup-heading: #0550ae;
+    --color-prettylights-syntax-markup-italic: #24292f;
+    --color-prettylights-syntax-markup-bold: #24292f;
+    --color-prettylights-syntax-markup-deleted-text: #82071e;
+    --color-prettylights-syntax-markup-deleted-bg: #FFEBE9;
+    --color-prettylights-syntax-markup-inserted-text: #116329;
+    --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+    --color-prettylights-syntax-markup-changed-text: #953800;
+    --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+    --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+    --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+    --color-prettylights-syntax-meta-diff-range: #8250df;
+    --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+    --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+    --color-fg-default: #24292f;
+    --color-fg-muted: #57606a;
+    --color-fg-subtle: #6e7781;
+    --color-canvas-default: #ffffff;
+    --color-canvas-subtle: #f6f8fa;
+    --color-border-default: #d0d7de;
+    --color-border-muted: hsla(210,18%,87%,1);
+    --color-neutral-muted: rgba(175,184,193,0.2);
+    --color-accent-fg: #0969da;
+    --color-accent-emphasis: #0969da;
+    --color-danger-fg: #cf222e;
+  }
+}
+
+.github-markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-default);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.github-markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.github-markdown-body h1:hover .anchor .octicon-link:before,
+.github-markdown-body h2:hover .anchor .octicon-link:before,
+.github-markdown-body h3:hover .anchor .octicon-link:before,
+.github-markdown-body h4:hover .anchor .octicon-link:before,
+.github-markdown-body h5:hover .anchor .octicon-link:before,
+.github-markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+}
+
+.github-markdown-body details,
+.github-markdown-body figcaption,
+.github-markdown-body figure {
+  display: block;
+}
+
+.github-markdown-body summary {
+  display: list-item;
+}
+
+.github-markdown-body a {
+  background-color: transparent;
+  color: var(--color-accent-fg);
+  text-decoration: none;
+}
+
+.github-markdown-body a:active,
+.github-markdown-body a:hover {
+  outline-width: 0;
+}
+
+.github-markdown-body abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+.github-markdown-body b,
+.github-markdown-body strong {
+  font-weight: 600;
+}
+
+.github-markdown-body dfn {
+  font-style: italic;
+}
+
+.github-markdown-body h1 {
+  margin: .67em 0;
+  font-weight: 600;
+  padding-bottom: .3em;
+  font-size: 2em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.github-markdown-body mark {
+  background-color: #ff0;
+  color: var(--color-text-primary);
+}
+
+.github-markdown-body small {
+  font-size: 90%;
+}
+
+.github-markdown-body sub,
+.github-markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.github-markdown-body sub {
+  bottom: -0.25em;
+}
+
+.github-markdown-body sup {
+  top: -0.5em;
+}
+
+.github-markdown-body img {
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: var(--color-canvas-default);
+}
+
+.github-markdown-body code,
+.github-markdown-body kbd,
+.github-markdown-body pre,
+.github-markdown-body samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.github-markdown-body figure {
+  margin: 1em 40px;
+}
+
+.github-markdown-body hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid var(--color-border-muted);
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--color-border-default);
+  border: 0;
+}
+
+.github-markdown-body html [type=button],
+.github-markdown-body [type=reset],
+.github-markdown-body [type=submit] {
+  -webkit-appearance: button;
+}
+
+.github-markdown-body [type=button]::-moz-focus-inner,
+.github-markdown-body [type=reset]::-moz-focus-inner,
+.github-markdown-body [type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.github-markdown-body [type=button]:-moz-focusring,
+.github-markdown-body [type=reset]:-moz-focusring,
+.github-markdown-body [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+.github-markdown-body [type=checkbox],
+.github-markdown-body [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.github-markdown-body [type=number]::-webkit-inner-spin-button,
+.github-markdown-body [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.github-markdown-body [type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+.github-markdown-body [type=search]::-webkit-search-cancel-button,
+.github-markdown-body [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.github-markdown-body ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+.github-markdown-body ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+.github-markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.github-markdown-body hr::before {
+  display: table;
+  content: "";
+}
+
+.github-markdown-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.github-markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.github-markdown-body td,
+.github-markdown-body th {
+  padding: 0;
+}
+
+.github-markdown-body details summary {
+  cursor: pointer;
+}
+
+.github-markdown-body details:not([open])>*:not(summary) {
+  display: none !important;
+}
+
+.github-markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  line-height: 10px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: var(--color-canvas-subtle);
+  border: solid 1px var(--color-neutral-muted);
+  border-bottom-color: var(--color-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
+}
+
+.github-markdown-body h1,
+.github-markdown-body h2,
+.github-markdown-body h3,
+.github-markdown-body h4,
+.github-markdown-body h5,
+.github-markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.github-markdown-body h2 {
+  font-weight: 600;
+  padding-bottom: .3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.github-markdown-body h3 {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+.github-markdown-body h4 {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.github-markdown-body h5 {
+  font-weight: 600;
+  font-size: .875em;
+}
+
+.github-markdown-body h6 {
+  font-weight: 600;
+  font-size: .85em;
+  color: var(--color-fg-muted);
+}
+
+.github-markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.github-markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: var(--color-fg-muted);
+  border-left: .25em solid var(--color-border-default);
+}
+
+.github-markdown-body ul,
+.github-markdown-body ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+.github-markdown-body ol ol,
+.github-markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.github-markdown-body ul ul ol,
+.github-markdown-body ul ol ol,
+.github-markdown-body ol ul ol,
+.github-markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.github-markdown-body dd {
+  margin-left: 0;
+}
+
+.github-markdown-body tt,
+.github-markdown-body code {
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+}
+
+.github-markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+  word-wrap: normal;
+}
+
+.github-markdown-body :-ms-input-placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+
+.github-markdown-body ::-ms-input-placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+
+.github-markdown-body ::placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+
+.github-markdown-body .pl-c {
+  color: var(--color-prettylights-syntax-comment);
+}
+
+.github-markdown-body .pl-c1,
+.github-markdown-body .pl-s .pl-v {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.github-markdown-body .pl-e,
+.github-markdown-body .pl-en {
+  color: var(--color-prettylights-syntax-entity);
+}
+
+.github-markdown-body .pl-smi,
+.github-markdown-body .pl-s .pl-s1 {
+  color: var(--color-prettylights-syntax-storage-modifier-import);
+}
+
+.github-markdown-body .pl-ent {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+
+.github-markdown-body .pl-k {
+  color: var(--color-prettylights-syntax-keyword);
+}
+
+.github-markdown-body .pl-s,
+.github-markdown-body .pl-pds,
+.github-markdown-body .pl-s .pl-pse .pl-s1,
+.github-markdown-body .pl-sr,
+.github-markdown-body .pl-sr .pl-cce,
+.github-markdown-body .pl-sr .pl-sre,
+.github-markdown-body .pl-sr .pl-sra {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.github-markdown-body .pl-v,
+.github-markdown-body .pl-smw {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.github-markdown-body .pl-bu {
+  color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+}
+
+.github-markdown-body .pl-ii {
+  color: var(--color-prettylights-syntax-invalid-illegal-text);
+  background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+}
+
+.github-markdown-body .pl-c2 {
+  color: var(--color-prettylights-syntax-carriage-return-text);
+  background-color: var(--color-prettylights-syntax-carriage-return-bg);
+}
+
+.github-markdown-body .pl-sr .pl-cce {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-string-regexp);
+}
+
+.github-markdown-body .pl-ml {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.github-markdown-body .pl-mh,
+.github-markdown-body .pl-mh .pl-en,
+.github-markdown-body .pl-ms {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-heading);
+}
+
+.github-markdown-body .pl-mi {
+  font-style: italic;
+  color: var(--color-prettylights-syntax-markup-italic);
+}
+
+.github-markdown-body .pl-mb {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-bold);
+}
+
+.github-markdown-body .pl-md {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+.github-markdown-body .pl-mi1 {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.github-markdown-body .pl-mc {
+  color: var(--color-prettylights-syntax-markup-changed-text);
+  background-color: var(--color-prettylights-syntax-markup-changed-bg);
+}
+
+.github-markdown-body .pl-mi2 {
+  color: var(--color-prettylights-syntax-markup-ignored-text);
+  background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+}
+
+.github-markdown-body .pl-mdr {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+
+.github-markdown-body .pl-ba {
+  color: var(--color-prettylights-syntax-brackethighlighter-angle);
+}
+
+.github-markdown-body .pl-sg {
+  color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+}
+
+.github-markdown-body .pl-corl {
+  text-decoration: underline;
+  color: var(--color-prettylights-syntax-constant-other-reference-link);
+}
+
+.github-markdown-body [data-catalyst] {
+  display: block;
+}
+
+.github-markdown-body g-emoji {
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1em;
+  font-style: normal !important;
+  font-weight: 400;
+  line-height: 1;
+  vertical-align: -0.075em;
+}
+
+.github-markdown-body g-emoji img {
+  width: 1em;
+  height: 1em;
+}
+
+.github-markdown-body::before {
+  display: table;
+  content: "";
+}
+
+.github-markdown-body::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.github-markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.github-markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.github-markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.github-markdown-body .absent {
+  color: var(--color-danger-fg);
+}
+
+.github-markdown-body .anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
+}
+
+.github-markdown-body .anchor:focus {
+  outline: none;
+}
+
+.github-markdown-body p,
+.github-markdown-body blockquote,
+.github-markdown-body ul,
+.github-markdown-body ol,
+.github-markdown-body dl,
+.github-markdown-body table,
+.github-markdown-body pre,
+.github-markdown-body details {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.github-markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.github-markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.github-markdown-body sup>a::before {
+  content: "[";
+}
+
+.github-markdown-body sup>a::after {
+  content: "]";
+}
+
+.github-markdown-body h1 .octicon-link,
+.github-markdown-body h2 .octicon-link,
+.github-markdown-body h3 .octicon-link,
+.github-markdown-body h4 .octicon-link,
+.github-markdown-body h5 .octicon-link,
+.github-markdown-body h6 .octicon-link {
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.github-markdown-body h1:hover .anchor,
+.github-markdown-body h2:hover .anchor,
+.github-markdown-body h3:hover .anchor,
+.github-markdown-body h4:hover .anchor,
+.github-markdown-body h5:hover .anchor,
+.github-markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.github-markdown-body h1:hover .anchor .octicon-link,
+.github-markdown-body h2:hover .anchor .octicon-link,
+.github-markdown-body h3:hover .anchor .octicon-link,
+.github-markdown-body h4:hover .anchor .octicon-link,
+.github-markdown-body h5:hover .anchor .octicon-link,
+.github-markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.github-markdown-body h1 tt,
+.github-markdown-body h1 code,
+.github-markdown-body h2 tt,
+.github-markdown-body h2 code,
+.github-markdown-body h3 tt,
+.github-markdown-body h3 code,
+.github-markdown-body h4 tt,
+.github-markdown-body h4 code,
+.github-markdown-body h5 tt,
+.github-markdown-body h5 code,
+.github-markdown-body h6 tt,
+.github-markdown-body h6 code {
+  padding: 0 .2em;
+  font-size: inherit;
+}
+
+.github-markdown-body ul.no-list,
+.github-markdown-body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.github-markdown-body ol[type="1"] {
+  list-style-type: decimal;
+}
+
+.github-markdown-body ol[type=a] {
+  list-style-type: lower-alpha;
+}
+
+.github-markdown-body ol[type=i] {
+  list-style-type: lower-roman;
+}
+
+.github-markdown-body div>ol:not([type]) {
+  list-style-type: decimal;
+}
+
+.github-markdown-body ul ul,
+.github-markdown-body ul ol,
+.github-markdown-body ol ol,
+.github-markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.github-markdown-body li>p {
+  margin-top: 16px;
+}
+
+.github-markdown-body li+li {
+  margin-top: .25em;
+}
+
+.github-markdown-body dl {
+  padding: 0;
+}
+
+.github-markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.github-markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.github-markdown-body table th {
+  font-weight: 600;
+}
+
+.github-markdown-body table th,
+.github-markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid var(--color-border-default);
+}
+
+.github-markdown-body table tr {
+  background-color: var(--color-canvas-default);
+  border-top: 1px solid var(--color-border-muted);
+}
+
+.github-markdown-body table tr:nth-child(2n) {
+  background-color: var(--color-canvas-subtle);
+}
+
+.github-markdown-body table img {
+  background-color: transparent;
+}
+
+.github-markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.github-markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.github-markdown-body .emoji {
+  max-width: none;
+  vertical-align: text-top;
+  background-color: transparent;
+}
+
+.github-markdown-body span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+.github-markdown-body span.frame>span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+}
+
+.github-markdown-body span.frame span img {
+  display: block;
+  float: left;
+}
+
+.github-markdown-body span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: var(--color-fg-default);
+}
+
+.github-markdown-body span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.github-markdown-body span.align-center>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.github-markdown-body span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.github-markdown-body span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.github-markdown-body span.align-right>span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.github-markdown-body span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+.github-markdown-body span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+
+.github-markdown-body span.float-left span {
+  margin: 13px 0 0;
+}
+
+.github-markdown-body span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+
+.github-markdown-body span.float-right>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.github-markdown-body code,
+.github-markdown-body tt {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: var(--color-neutral-muted);
+  border-radius: 6px;
+}
+
+.github-markdown-body code br,
+.github-markdown-body tt br {
+  display: none;
+}
+
+.github-markdown-body del code {
+  text-decoration: inherit;
+}
+
+.github-markdown-body pre code {
+  font-size: 100%;
+}
+
+.github-markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.github-markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.github-markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.github-markdown-body .highlight pre,
+.github-markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: var(--color-canvas-subtle);
+  border-radius: 6px;
+}
+
+.github-markdown-body pre code,
+.github-markdown-body pre tt {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.github-markdown-body .csv-data td,
+.github-markdown-body .csv-data th {
+  padding: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.github-markdown-body .csv-data .blob-num {
+  padding: 10px 8px 9px;
+  text-align: right;
+  background: var(--color-canvas-default);
+  border: 0;
+}
+
+.github-markdown-body .csv-data tr {
+  border-top: 0;
+}
+
+.github-markdown-body .csv-data th {
+  font-weight: 600;
+  background: var(--color-canvas-subtle);
+  border-top: 0;
+}
+
+.github-markdown-body .footnotes {
+  font-size: 12px;
+  color: var(--color-fg-muted);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.github-markdown-body .footnotes ol {
+  padding-left: 16px;
+}
+
+.github-markdown-body .footnotes li {
+  position: relative;
+}
+
+.github-markdown-body .footnotes li:target::before {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -24px;
+  pointer-events: none;
+  content: "";
+  border: 2px solid var(--color-accent-emphasis);
+  border-radius: 6px;
+}
+
+.github-markdown-body .footnotes li:target {
+  color: var(--color-fg-default);
+}
+
+.github-markdown-body .footnotes .data-footnote-backref g-emoji {
+  font-family: monospace;
+}
+
+.github-markdown-body [hidden] {
+  display: none !important;
+}
+
+.github-markdown-body ::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
+/*!
+  Theme: GitHub
+  Description: Highlight-js port of github.com theme
+  Author: github.com
+  Maintainer: @SNDST00M, @mjbvz
+  Updated: 2021-12-08
+*/
+.markdown-body pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 16px;
+}
+
+.markdown-body code.hljs {
+  padding: 3px 5px;
+}
+
+/*!
+  Theme: GitHub
+  Description: Theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-dark
+  Current colors taken from GitHub's CSS
+*/
+.markdown-body .hljs {
+  color: var(--color-fg-default);
+  background: var(--color-canvas-subtle);
+}
+
+.markdown-body .hljs-doctag,
+.markdown-body .hljs-keyword,
+.markdown-body .hljs-meta .hljs-keyword,
+.markdown-body .hljs-template-tag,
+.markdown-body .hljs-template-variable,
+.markdown-body .hljs-type,
+.markdown-body .hljs-variable.language_ {
+  color: var(--color-prettylights-syntax-keyword);
+}
+
+.markdown-body .hljs-title,
+.markdown-body .hljs-title.class_,
+.markdown-body .hljs-title.class_.inherited__,
+.markdown-body .hljs-title.function_ {
+  color: var(--color-prettylights-syntax-entity);
+}
+
+.markdown-body .hljs-attr,
+.markdown-body .hljs-attribute,
+.markdown-body .hljs-literal,
+.markdown-body .hljs-meta,
+.markdown-body .hljs-number,
+.markdown-body .hljs-operator,
+.markdown-body .hljs-selector-attr,
+.markdown-body .hljs-selector-class,
+.markdown-body .hljs-selector-id,
+.markdown-body .hljs-variable {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.markdown-body .hljs-meta .hljs-string,
+.markdown-body .hljs-regexp,
+.markdown-body .hljs-string {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.markdown-body .hljs-built_in,
+.markdown-body .hljs-symbol {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.markdown-body .hljs-code,
+.markdown-body .hljs-comment,
+.markdown-body .hljs-formula {
+  color: var(--color-prettylights-syntax-comment);
+}
+
+.markdown-body .hljs-name,
+.markdown-body .hljs-quote,
+.markdown-body .hljs-selector-pseudo,
+.markdown-body .hljs-selector-tag {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+
+.markdown-body .hljs-subst {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.markdown-body .hljs-section {
+  color: var(--color-prettylights-syntax-markup-heading);
+  font-weight: bold;
+}
+
+.markdown-body .hljs-bullet {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.markdown-body .hljs-emphasis {
+  color: var(--color-prettylights-syntax-constant);
+  font-style: italic;
+}
+
+.markdown-body .hljs-strong {
+  color: var(--color-prettylights-syntax-constant);
+  font-weight: bold;
+}
+
+.markdown-body .hljs-addition {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.markdown-body .hljs-deletion {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+/* From extension ms-toolsai.jupyter */
+/* These classnames are inherited from bootstrap, but are present in most notebook renderers */
+
+.alert {
+    width: auto;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.alert > *:last-child {
+    margin-bottom: 0;
+}
+#preview > .alert:last-child {
+    /* Prevent this being set to zero by the default notebook stylesheet */
+    padding-bottom: 1em;
+}
+
+.alert-success {
+    /* Note there is no suitable color available, so we just copy "info" */
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-info {
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-warning {
+    background-color: var(--theme-warning-background);
+    color: var(--theme-warning-foreground);
+}
+.alert-danger {
+    background-color: var(--theme-error-background);
+    color: var(--theme-error-foreground);
+}
+
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <div class="github-markdown-body github-markdown-auto">
+            <div class="github-markdown-content"><h1 id="魔術師-sd31-based-牌組介紹">魔術師 (SD31-based) 牌組介紹</h1>
+<h2 id="前言">前言</h2>
+<p>眾所皆知其實 <code>魔術師</code>、<code>EM</code>、<code>異色眼</code>、<code>霸王龍-zarc -based</code> 這4個系統是可以相互支援的 (ARC-V動畫裡面都是番茄用的牌)。</p>
+<p>而本篇則主要是要介紹以 <code>SD31 魔術師</code> 為基礎所組成的「 <strong>演牌型</strong>」 靈擺牌組  (以下簡稱 <code>SD31-based 魔術師</code> ) ，即是賽場中被歸類為 <code>魔術師</code> 這個類別的牌組最常用的古架。</p>
+<p>(至於技剝強攻型的玩法，筆者不太熟，可能要去猜考別篇)</p>
+<p><code>SD31-based 魔術師</code> 在2018年當  <strong>沉鍊裝勇士-琥珀金(銀金公主)</strong> 未被限一、 <strong>水晶機巧-哈里纖維</strong> 還健在以及 <strong>宙讀的魔術士</strong> 、 <strong>刻讀的魔術士</strong> 這兩張廚牌未被限一之時曾經在餅圖上佔有一席之地，是它最風光的時期。</p>
+<p>如今隨著上述夥伴的殘廢，以及單卡動+一堆手坑 (即使是演牌也是) 這種較為穩定、有彈性的牌組當道，這副在現在已經變成高手 (非筆者，筆者還太廢，無法) 限定或偷上位的牌型。如果不是有興趣或很有愛(筆者屬於後者)，不建議打演牌向 <code>SD31-based 魔術師</code> :</p>
+<h3 id="---以下勸退文---">-- 以下勸退文 --</h3>
+<p>如果是新手(剛入坑)，或是要求穩定的玩家，極度不推薦使用本篇提供的做法，原因如下:</p>
+<ol>
+<li>
+<p>( Fresh man ) P牌一張有兩個效果 : 魔法效果以及怪獸效果。如果是依靠P召來展開的牌組，基本上每張牌的兩個效果都要記，要記得的太多。</p>
+</li>
+<li>
+<p>( Fresh man ) 想要以背公式演導向的打法的話，實戰時幾乎不太會成功，然後就打不贏，新手接觸後打完match有可能會變得跟動畫中使用這副牌的人一樣。</p>
+</li>
+<li>
+<p>我想這應該是由於這副的古架 (SD31) 實在太老了，無法像龍劍士那樣少卡開演，是以不太穩定。筆者認為其實這副牌要當演牌打的話要 <strong>5卡動</strong> 。不是說要特定的那5張，而是不同的5張會使你使用不同的做法。</p>
+</li>
+<li>
+<p>以下情況有極高的機率會使你輸掉這場對局:</p>
+<ol>
+<li>
+<p>中G</p>
+</li>
+<li>
+<p>中隕石</p>
+<p>演牌向的 <code>SD31-based 魔術師</code> 如果要用P後鮮花防隕石，那陣就會比較小，以現在其他單卡動+手坑的牌來說，小擋等於沒有擋，然後對手就會踩過去，然後就輸了。</p>
+</li>
+<li>
+<p>中2坑(手牌沒有很好的情況)</p>
+<p>e.g. 無效系給銀金，灰流給小丑或星刻 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\to</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> 沒有資源+演不動 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\to</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> 輸</p>
+<p>想哭。</p>
+</li>
+<li>
+<p>中 次元障蔽</p>
+<p>無法，儀式、F、S、X、P的原罪。</p>
+</li>
+<li>
+<p>中 冥王結界波/一滴/太陽蛋/熔炎魔神</p>
+<p>超級絕望，但應該有預兆。
+看到第二把一直演然後對手像是牆壁，就大概知道了。</p>
+<p>冥王結界波或是一滴(他沒有丟陷阱卡為代價的話) 有機會可以出No.22 來避免 (有錢的話)，後面配合卡的部分會提到。</p>
+<p>(就是連鎖自己的紅陣(陷阱)然後開效果點掉J波/一滴)</p>
+</li>
+</ol>
+<p>聽起來就是幾乎在BO3的賽場上一定會輸。</p>
+<p>所以筆者其實覺得想要用演牌型的 <code>SD31-based 魔術師</code> 去打賽場要不是很有愛，就是想去靠賽。</p>
+</li>
+</ol>
+<p><strong>-- 請記住，只有真正的「魔術師」(限一的上手率看起來像是沒有限制，然後把對手切到都抽不到坑的那種) 才有能力使用魔術師起舞 --</strong></p>
+<h2 id="單卡介紹">單卡介紹</h2>
+<p>這副牌的字段有很多 (4大類):</p>
+<pre><code>魔術師
+EM (娛樂夥伴)
+異色眼
+靈擺
+</code></pre>
+<ul>
+<li>
+<p>不會全部有該些字段的牌都講，只講 <code>SD31-based 魔術師</code> 構成所用到的。</p>
+</li>
+<li>
+<p>有些牌一次會帶1個以上的字段，記起來ㄏ累。</p>
+</li>
+<li>
+<p>魔術師主要是透過 <strong>P一排是4星P怪</strong> 來展開，而其刻度為 8(高刻度) 或 1、2 (低刻度)。</p>
+</li>
+<li>
+<p>怪獸最正確的體質為 4星 暗屬性 魔法使族 。</p>
+</li>
+</ul>
+<h3 id="sd31-四天龍人形化">SD31 四天龍人形化</h3>
+<h4 id="rainbow"></h4>
+<h4 id="虹彩的魔術師-魔術師靈擺">虹彩的魔術師 (魔術師、靈擺)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\虹彩的魔術師.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>暗</th>
+<th>魔法使族</th>
+<th>L4</th>
+<th>ATK 1500</th>
+<th>DEF 1300</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左8右8
+
+擺動效果：
+1回合1次，可以我方場上1體魔法使族、闇屬性怪獸為對象發動。
+此回合該怪獸和對手怪獸進行戰鬥給予對手的戰鬥傷害加倍。
+之後，此卡破壞。
+
+怪獸效果：
+此卡在規則上視為「靈擺龍」之名的卡片。
+此卡被戰鬥、卡片效果破壞的場合可以發動。
+從牌組將1張「靈擺讀陣」之名的卡片加入手札。
+</code></pre>
+<p>魔法效果給跟怪打戰傷兩倍不是重點(雖然偶爾能靠這個搶血打死)，由於<strong>發動之後會自爆</strong>，進而觸發自己的強力怪獸效果，才是重點。</p>
+<p>一定要砍半後才會自爆，所以對象消失，就變成不能處理給打兩倍的效果而卡住。</p>
+<p>要注意由於是讓戰傷變兩倍，所以 <strong>「沒有戰階不能開」</strong> (e.g. 先攻。對，先手那回合沒有戰階，雖然陣很強，但還是不要口糊別人比較好)</p>
+<p>怪獸效果在被破壞後能檢索「靈擺讀陣」(沒有一回合一次，能炸幾次就能檢幾張)。目前能檢索的有這兩張:</p>
+<ul>
+<li>
+<p>永續魔法 <a href="#g_formation"><em><strong>星霜的靈擺讀陣</strong></em></a> (綠陣) : 是重要的資源產生點</p>
+</li>
+<li>
+<p>永續陷阱 <a href="#r_formation"><em><strong>時空的靈擺讀陣</strong></em></a> (紅陣) : 是終端之一</p>
+</li>
+</ul>
+<p>上述兩張都能藉由虹彩被炸掉而從牌組檢索出來，故放2~3 (本篇牌組放3)。</p>
+<p>所以先手展開的過程有個重要任務是<strong>炸虹彩找陣</strong>。</p>
+<p>此外要注意他在規則上名字視為「<strong>靈擺龍</strong>」(效果外文本) (異色眼靈擺龍人形化)，所以他也帶有「靈擺」這個字段。當對手想檢舉你亂檢索時記住不要被騙到。</p>
+<h4 id="blacktooth"></h4>
+<h4 id="黑牙的魔術師-魔術師">黑牙的魔術師 (魔術師)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\黑牙的魔術師.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>暗</th>
+<th>魔法使族</th>
+<th>L4</th>
+<th>ATK 1700</th>
+<th>DEF 800</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左8右8
+擺動效果：
+1回合1次，可以對手場上1體表側表示怪獸為對象發動。
+到回合結束以前該怪獸的攻擊力減半。
+之後，此卡破壞。
+
+怪獸效果：
+此卡在規則上視為「超量龍」之名的卡片。
+此卡被戰鬥、卡片效果破壞的場合，可以我方墓地1體魔法使族、闇屬性怪獸為對象發動。
+該怪獸特殊召喚。
+</code></pre>
+<p>魔法效果點別人砍半然後自爆，都很重要，不過自爆更重要，會觸發強力怪獸效果。
+砍半使你有機會直接通召打爆一些定場怪，e.g. 米德拉什 或 滑板人。</p>
+<p>一樣，對象要砍半攻擊力才會自爆 (0也可以砍半)，所以如果對象消失或是對象不受影響之類的狀況就不會自爆。</p>
+<p>怪獸效果被炸能復活墓地暗魔法使，是本篇展開方式所倚賴的重要效果，也是沒有一回合一次，所以炸幾次就能拉幾次，展開時常常需要炸他來增加怪的數量，極為重要，所以放3。</p>
+<p>** 有人會覺得先攻抽太多卡(對面沒有怪給你點)，所以只放2，第3張放備邊。</p>
+<p>(由此可知其實深淵獸或DD烏鴉對 <code>SD31-based 魔術師</code> 是有干擾能力的。)</p>
+<p>規則上視為「<strong>超量龍</strong>」 (暗叛逆超量龍人形化)</p>
+<h4 id="purplepoison"></h4>
+<h4 id="紫毒的魔術師-魔術師靈擺">紫毒的魔術師 (魔術師、靈擺)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\紫毒的魔術師.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>暗</th>
+<th>魔法使族</th>
+<th>L4</th>
+<th>ATK 1200</th>
+<th>DEF 2100</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左1右1
+擺動效果：
+1回合1次，我方場上的魔法使族、闇屬性怪獸進行戰鬥的傷害計算以前可以發動。
+到傷害步驟結束以前該怪獸的攻擊力上升1200。
+之後，此卡破壞。
+
+怪獸效果：
+此卡在規則上視為「融合龍」之名的卡片。
+此卡被戰鬥、卡片效果破壞的場合，可以場上1張表側表示的卡片為對象發動。
+該卡片破壞。
+</code></pre>
+<p>魔法效果讓暗魔法使在打人時攻擊力+1200，也有機會拿來使得通召一隻打敗小米，算蠻強的。重點是會自爆，讓這個效果威脅大增。</p>
+<p>怪獸效果被炸可以炸掉一張表側卡，本家解場用，當他貼在P區後用暗魔法使打別人可藉由其魔法+怪獸效果可以拆別人2張，筆者認為很強。
+配合<a href="#r_formation">紅陣</a>亦能換掉2張，總之就是本家強力解場。</p>
+<p>大屁屁，很卡很卡的場合也能set 下去讓別人打，就算被打掉也有機會帶走別人一張。</p>
+<p>小機率會拿來炸自己(e.g. 炸虹彩 或 黑牙) 幫助展開。</p>
+<p>直入3</p>
+<p>規則上視為「融合龍」(飢餓毒融合龍人形化)</p>
+<h4 id="whitewing"></h4>
+<h4 id="白翼的魔術師-魔術師">白翼的魔術師 (魔術師)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\白翼的魔術師.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>風</th>
+<th>魔法使族</th>
+<th>協調</th>
+<th>L4</th>
+<th>ATK 1600</th>
+<th>DEF 1400</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左1右1
+擺動效果：
+1回合1次，可以將以我方場上的魔法使族、闇屬性怪獸作為對象的卡片效果無效。
+之後，此卡破壞。
+
+怪獸效果：
+此卡在規則上視為「同步龍」之名的卡片。
+擺動召喚出場的此卡用於同步召喚的場合除外。
+</code></pre>
+<p><strong>廢牌，會講只是因為要湊齊4天龍</strong></p>
+<p>體質歪掉，效果又不能賺牌，魔法效果看似可以幫暗魔擋指定，但這副牌最怕泡影的地方是銀金公主，根本幫不上忙。
+怪獸效果就是個笑話，除了副作用以外沒有其他的正面效益。唯一的賣點是他是4星協調，不過水機被禁了，所以目前一般不投入。</p>
+<p>幫他講點好話，這副牌的另外一隻協調 <a href="#tuning"><strong>調弦的魔術師</strong></a> 只能跟有 魔術師 字段的其他人做為 S F X 的素材，而如果想要跟<a href="#chorno">刻讀的魔術士</a>同步出鮮花，可以靠他。還有他的外表較為女性化，看到會比較開心。</p>
+<p>另外要注意，他的魔法效果是不入連鎖的，在可以適用的效果處理到時直接讓其無效就好。</p>
+<p>總之，因為規則上視為「同步龍」(幻透翼同步龍人形化)，所以除非是要玩花式霸王龍Z-arc 軸的，不然一般不用放。</p>
+<p><strong>上述紅黑紫白的魔法效果都沒有綁名字一回合一次，複數張貼上去能用複數次</strong></p>
+<p><strong>而怪獸效果更沒有一回合一次，舉個例子 : 場上紫毒被破壞送額外後點鮮花，先花把他「無效並破化」，所以紫毒被破壞進墓地了。因為他被破壞，所以發動點鮮花炸掉，然後對手的鮮花還是一樣GG</strong></p>
+<h3 id="sd31-被限一的難兄難弟">SD31 被限一的難兄難弟</h3>
+<h4 id="astral"></h4>
+<h4 id="宙讀的魔術士讀星魔術士">宙讀的魔術士(讀星魔術士)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\讀星魔術士.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>暗</th>
+<th>魔法使族</th>
+<th>L7</th>
+<th>ATK 2500</th>
+<th>DEF 2000</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左1右1
+擺動效果：
+「讀星魔術士」的擺動效果1回合僅能使用1次。
+我方的主要階段時可以發動。
+此卡破壞，從手札、牌組選擇1體「星讀的魔術師」設置在擺動區域或是特殊召喚。
+
+怪獸效果：
+(1)：
+我方場上的卡片被戰鬥、卡片效果破壞的場合可以發動。
+從手札將此卡特殊召喚。
+之後，可以從牌組選擇1體此回合被破壞的怪獸的同名怪獸加入手札。
+(2)：
+可以將場上的此卡除外，從我方手札、場上、墓地將
+「擺動龍」「超量龍」「同步龍」「融合龍」之名的怪獸各1體除外發動。
+從額外牌組將1體「霸王龍Z-ARC」視為以融合召喚方式特殊召喚。
+</code></pre>
+<p>魔法效果能從牌組直接帶出<a href="#astral_magician">星讀的魔術師</a>，要設置或跳出來皆可，強。</p>
+<p>怪獸效果是這副牌賺牌的關鍵，每當我方場上有卡被炸就能「手牌誘發」，並可以檢索這回合有被炸過的怪獸。</p>
+<p>我方靈擺區卡片被炸掉後，也算在「這回合有被炸過的怪獸」裡面。</p>
+<p>怪獸效果<ins><strong>沒有一回合一次</strong></ins>，所以，此篇Combo 展開就是透過不斷觸發宙讀效果，進而增怪+賺牌，是這副裡面過勞的怪獸。</p>
+<p>注意，這種「這回合有被炸過的怪獸」的判例是<strong>那張</strong> (不是那個名字) 卡被炸完後不能離開被炸的地方，不然那張卡的標籤會被重置，「被炸過」標籤被撕掉，宙讀會看不到，而不能檢索他。</p>
+<pre><code>e.g : 
+慧眼從P區被破壞後，那張慧眼再被P召出來。
+之後其他卡被破壞觸發手上宙讀效果處理時，
+由於那張慧眼被重置過，
+所以不能因為那張慧眼這回合有被破壞過而檢索牌組裡慧眼。
+
+(但如果有其他張沒有被重置過的慧眼有在清單裡面
+，則依舊能夠檢所慧眼)
+</code></pre>
+<p>至於出霸王龍的那個效果賽場上幾乎不會也沒辦法用到，是為了還原動畫效果用的。當然，當娛樂向使用也行。</p>
+<h4 id="chorno"></h4>
+<h4 id="刻讀的魔術士讀時魔術士">刻讀的魔術士(讀時魔術士)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\讀時魔術士.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>暗</th>
+<th>魔法使族</th>
+<th>L6</th>
+<th>ATK 2000</th>
+<th>DEF 1700</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左8右8
+擺動效果：
+「讀時魔術士」的擺動效果1回合僅能使用1次。
+我方的主要階段時可以發動。
+此卡破壞，從手札、牌組選擇1體「時讀的魔術師」設置在擺動區域或是特殊召喚。
+
+怪獸效果：
+(1)：
+我方場上的卡片被戰鬥、卡片效果破壞的場合可以發動。
+從手札將此卡特殊召喚。
+之後，可以從手札將1體怪獸特殊召喚。
+(2)：
+可以將場上的此卡除外，從我方手札、場上、墓地將
+「擺動龍」「超量龍」「同步龍」「融合龍」之名的怪獸各1體除外發動。
+從額外牌組將1體「霸王龍Z-ARC」視為以融合召喚方式特殊召喚。　
+</code></pre>
+<p>基本上就是相對應宙讀的另外一隻魔術士，只是他是帶手牌怪，特定的手牌組合或是場上怪不夠需要從手牌跳的時候會改檢索他而非宙讀。</p>
+<p><strong>要注意這兩張廚牌都沒有魔術師字段，所以<a href="#g_formation">綠陣</a>不能拿它們；刻讀也不能跟<a href="#tuning">調弦</a>同步出鮮花女爵。</strong></p>
+<h3 id="其餘的魔術師們">其餘的魔術師們</h3>
+<h4 id="peehole"></h4>
+<h4 id="慧眼的魔術師-魔術師">慧眼的魔術師 (魔術師)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\慧眼的魔術師.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>光</th>
+<th>魔法使族</th>
+<th>L4</th>
+<th>ATK 1500</th>
+<th>DEF 1500</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左5右5
+擺動效果：
+我方主要階段時，若我方另一邊的擺動卡區存在
+「魔術師」或「EM」之名的卡片則可以發動。
+此卡破壞，從我方牌組將1體「慧眼的魔術師」以外的
+「魔術師」之名的擺動怪獸放置在我方的擺動卡區。
+
+怪獸效果：
+我方主要階段時，可以從我方手札捨棄此卡，
+選擇我方擺動卡區1張擺動刻度和原數值相異的卡片為對象發動。
+到回合結束時為止該卡片的擺動刻度變為原數值。
+</code></pre>
+<p>怪獸效果幾乎用不到。</p>
+<p>魔法效果極強，是這副牌調度刻度的關鍵，另一邊是低刻度，就用他拉出高刻度，反之亦然。</p>
+<p>或是想要用特定隻的魔法效果時，也可以使用他拉上來使用 :</p>
+<ul>
+<li>想拿紅綠陣拉<a href="#rainbow">虹彩</a>，解場拉<a href="#purplepoison">紫毒</a>，復活拉<a href="#blacktooth">黑牙</a>(當然也要看另一邊的刻度是多少)。</li>
+</ul>
+<p>他是直接從牌組set ，不吃灰流，不要被騙。</p>
+<p>由於發動完會自炸，能觸發手上的<a href="#astral">宙讀</a>/<a href="#chorno">刻讀</a>效果。如果觸發到宙讀，則可以拿第二張慧眼(慧眼沒有一回合一次)，強。</p>
+<p>(Note : 手牌誘發我方一個連鎖串只能開一個，所以不能宙讀接刻讀這樣開。)</p>
+<p>配合<a href="#g_formation">綠陣</a>更有機會一次把需要的材料湊到位，相當強力。</p>
+<p>直入3</p>
+<h4 id="tuning"></h4>
+<h4 id="調弦的魔術師-魔術師">調弦的魔術師 (魔術師)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\調弦的魔術師.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>暗</th>
+<th>魔法使族</th>
+<th>協調</th>
+<th>L4</th>
+<th>ATK 0</th>
+<th>DEF 0</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左8右8
+擺動效果：
+此卡於擺動區域存在為限，我方場上所有怪獸的
+攻擊力、守備力上升我方額外牌組表側表示的
+「魔術師」之名的擺動怪獸的種類數×100。
+
+怪獸效果：
+此卡不能從額外牌組特殊召喚、
+作為融合、同步、超量素材的場合，
+其他素材必須全為「魔術師」之名的擺動怪獸。
+「調弦的魔術師」的怪獸效果1回合僅能使用1次。
+此卡從手札擺動召喚成功時可以發動。
+從牌組將1體「調弦的魔術師」以外的
+「魔術師」之名的擺動怪獸以守備表示特殊召喚。
+以此效果特殊召喚的怪獸效果無效化，離場的場合除外。
+</code></pre>
+<p>魔法效果就加攻守，對於換資源沒什麼用，但要回殺時進戰階之前可以把他貼上去增加總體傷害。</p>
+<p>一個有趣的現象是定場怪會因為他在刻度而攻擊力超過3000，在對某些對局會有莫名的作用。</p>
+<p>對於2擋神弓，攻擊力可能會到2000，這有可能會打亂想要不踩到任何一擋就想用戰破來過神弓的對手的計策。 (但遇到恐摔 或 獸王 還是死QQ)</p>
+<p>怪獸效果為展開關鍵，P 召成功就能從牌組拉魔術師，通常希望可以P 他 (注意他只能從手上 P，所以如果他在額外，可以使用<a href="#discard_dragon">賤龍</a>把他撿回手)。可以拉4星來同步超量，P 的夠多的情況可以考慮拉6星來同步鮮花女爵去護航。</p>
+<p>展開成功與否的關鍵，直入3</p>
+<p>要記得要以他做素材進行 S F X，其他人一定要有魔術師字段的 P怪，所以不能用他+<a href="#dad">老爸</a>或<a href="#joker">小丑</a>出泥睡或8星同步，也不能用他+<a href="#chorno">刻讀</a>做鮮花。</p>
+<h4 id="discard_dragon"></h4>
+<h4 id="賤龍的魔術師-魔術師">賤龍的魔術師 (魔術師)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\賤龍的魔術師.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>光</th>
+<th>魔法使族</th>
+<th>L6</th>
+<th>ATK 2100</th>
+<th>DEF 1400</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左2右2
+擺動效果：
+「賤龍的魔術師」的擺動效果1回合僅能使用1次。
+我方另一邊的擺動區域有「魔術師」之名的卡片存在的場合可以發動。
+從我方額外牌組選擇1體表側表示的「賤龍的魔術師」以外的
+「魔術師」或是「異色眼」之名的擺動怪獸加入手札。
+
+怪獸效果：
+「賤龍的魔術師」的怪獸效果1回合僅能使用1次。
+此卡召喚、特殊召喚成功的場合，可以我方墓地1體「賤龍的魔術師」以外的
+「魔術師」之名的擺動怪獸或是「異色眼」之名的怪獸為對象發動。
+該怪獸加入手札。
+</code></pre>
+<p>魔法效果很重要，可以回收額外表側的 魔術師 或 異色眼，可以把<a href="#peehole">慧眼</a>拿回來以利後續使用；或是拿一隻回手藉此多P一隻怪下來 (大師規則 2020 下 P牌的悲哀)。</p>
+<p>怪獸效果就看情況，若P出來有需要回收的東西就發。</p>
+<p>特別注意他是6星，可以跟 <a href="#tuning">調弦</a> 或 <a href="#whitewing">白翼</a> 變成鮮花女爵 (時常用的護航手段之一)
+；或是跟<a href="#egg">EM異色眼同步</a>者變成槍管S龍或爆龍劍士。</p>
+<p>總之他是P效果強力，同時等級又不錯的支援牌。</p>
+<p>放3</p>
+<h4 id="EMsky"></h4>
+<h4 id="em天空的魔術師-em魔術師">EM天空的魔術師 (EM、魔術師)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\EM天空的魔術師.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>暗</th>
+<th>魔法使族</th>
+<th>L4</th>
+<th>ATK 1500</th>
+<th>DEF 1000</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左8右8
+擺動效果：
+此卡名的擺動效果1回合僅能使用1次。
+僅1體從額外牌組被特殊召喚到我方場上的
+融合、同步、超量怪獸
+被戰鬥或是對手的卡片效果破壞時可以發動。
+該被破壞的怪獸特殊召喚。
+之後，此卡破壞。
+
+怪獸效果：
+此卡名的怪獸效果1回合僅能使用1次。
+此卡召喚、特殊召喚成功的回合的我方主要階段時可以發動。
+此回合，依據此卡以外的我方場上的怪獸的種類適用以下效果。
+●融合：此卡可以直接攻擊。
+●同步：對手不能發動怪獸效果。
+●超量：此卡的攻擊力變為原攻擊力的2倍數值。
+●擺動：結束階段時從牌組將1體擺動怪獸加入手札。
+</code></pre>
+<p>魔法效果是續命用的。
+例如當我方泥睡魔獸被對方炸掉進墓地時，就能使用在P區的他把泥睡復活起來，繼續擺爛。</p>
+<p>定完場之後如果可以也能放一隻這個在P區，讓那些定場怪萬一不幸被炸掉或戰破，可以用他復活起來再苟一下。</p>
+<p>怪獸效果是喊完之後，依據效果處理當下的種類分別適用(有兩種就可以得到對應的兩個效用，有3種就可以得到對應的3種效用，以此類推)</p>
+<p>主要看兩個 : 有其他靈擺怪 跟 同步怪的那兩個。靈擺怪是結束階段檢一張P卡，算是賺牌的一種方式，這副通常拿來檢索刻讀、小丑、超天新龍，下回合使用(<s>如果沒有被幹死的話</s>)。</p>
+<p>若在處理時有同步怪，處理完後即進入大外神模式，再也不需要擔心對方怪獸效果了。
+中G想要回殺也可先出同步怪並喊此效果，若喊成功則可以避面其他怪獸手坑 。</p>
+<p>(<s>然後就被3張泡影砸死了</s>)</p>
+<p>通常放 1~2</p>
+<h4 id="七爺八爺">七爺八爺</h4>
+<h4 id="astral_magician"></h4>
+<h4 id="星讀的魔術師">星讀的魔術師</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\星讀的魔術師.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>暗</th>
+<th>魔法使族</th>
+<th>L5</th>
+<th>ATK 1200</th>
+<th>DEF 2400</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左1右1
+擺動效果：
+(1)此卡表側表示存在擺動卡區為限，若我方的擺動怪獸進行戰鬥，
+對方直到傷害步驟結束時為止不能發動魔法卡。
+(2)若我方另一邊的擺動卡區不存在「魔術師」或「異色眼」之名的卡片，
+此卡的擺動刻度變為4。
+
+怪獸效果：
+(1)1回合1次，我方場上的1體擺動怪獸被對方卡片效果回到手札時可以發動。
+從手札特殊召喚1體和回到手札的怪獸同名的怪獸。
+</code></pre>
+<p>廢件1號。當刻度另一邊不是魔術師或異色眼有副作用，意義在哪?</p>
+<p>不希望抽上來，放他只是拿來給<a href="#astral">宙讀</a>調度。</p>
+<h4 id="chorno_magician"></h4>
+<h4 id="時讀的魔術師-魔術師">時讀的魔術師 (魔術師)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\時讀的魔術師.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>暗</th>
+<th>魔法使族</th>
+<th>L3</th>
+<th>ATK 1200</th>
+<th>DEF 600</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左8右8
+擺動效果：
+若我方場上不存在怪獸則可以發動此卡。
+(1)此卡表側表示存在擺動區為限，若我方的擺動怪獸進行戰鬥，
+對方直到傷害步驟結束時為止不能發動陷阱卡。
+(2)若我方另一邊的擺動區不存在「魔術師」或「異色眼」之名的卡片，
+此卡的擺動刻度變為4。
+
+怪獸效果：
+(1)此卡表側表示存在怪獸卡區為限，1回合1次，我方擺動區的卡不會被對方卡片效果破壞。
+</code></pre>
+<p>廢件2號，還是很廢很廢的那種。</p>
+<p>場上有怪不能貼P，另一邊不是魔術師或異色眼又有副作用，超廢，超不希望抽上來，放他只是拿來給<a href="#chorno">刻讀</a>調度。</p>
+<h3 id="em--異色眼">EM &amp; 異色眼</h3>
+<h4 id="dad"></h4>
+<h4 id="em靈擺魔術士-em-靈擺">EM靈擺魔術士 (EM 靈擺)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\EM擺動魔術士.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>地</th>
+<th>魔法使族</th>
+<th>L4</th>
+<th>ATK 1500</th>
+<th>DEF 800</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左2右2
+擺動效果：
+我方場上有「EM」之名的怪獸擺動召喚的場合發動。
+到回合結束以前我方場上所有「EM」之名的怪獸的攻擊力上升1000。
+
+怪獸效果：
+「EM擺動魔術士」的怪獸效果1回合僅能使用1次。
+此卡特殊召喚成功的場合，可以我方場上最多2張卡片為對象發動。
+該卡片破壞，從牌組將被破壞的卡片數量的「EM擺動魔術士」以外
+的「EM」之名的怪獸加入手札（同名卡片最多1張）。
+</code></pre>
+<p>俗稱老爸，因為長的很像ARC-V裡面番茄(主角，同時他也是用這副牌)他爹。</p>
+<p>魔法效果要注意，是必發，能發的場合要先喊1 (<s>不然會被雞掰人檢舉</s>)。不太重要，不過偶爾對方空場時能夠憑藉這個效果把對方推死。</p>
+<p>怪獸效果ㄏ賺，通常都會選炸2檢索2，炸到<a href="#rainbow">虹彩</a>能夠觸發檢<a href="#formation">陣</a>，<a href="#blacktooth">黑牙</a>復活，<a href="#purplepoison">紫毒</a>炸場等等，賺。</p>
+<p>要注意他本身也有「靈擺」這個字段</p>
+<p>直入3</p>
+<h4 id="joker"></h4>
+<h4 id="em骷髏雜技小丑-em">EM骷髏雜技小丑 (EM)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\EM骷髏蝙蝠小丑.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>暗</th>
+<th>魔法使族</th>
+<th>L4</th>
+<th>ATK 1800</th>
+<th>DEF 100</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左8右8
+擺動效果：
+我方僅能擺動召喚「EM」之名的怪獸、
+「魔術師」之名的擺動怪獸、「異色眼」之名的怪獸。
+此效果不會被無效化。
+
+怪獸效果：
+此卡召喚成功時可以發動。
+從牌組的「EM」之名的怪獸、
+「魔術師」之名的擺動怪獸、「異色眼」之名的怪獸
+之中選擇1張「EM骷髏蝙蝠小丑」以外的卡片加入手札。　
+</code></pre>
+<p>魔法效果要注意會限制只能P EM 魔術師 異色眼。</p>
+<p>怪獸效果簡單爆力，就檢索他能P的那3個字段，是本副牌的通召點。</p>
+<p>直入3</p>
+<h4 id="egg"></h4>
+<h4 id="em異色眼同步者-em-異色眼">EM異色眼同步者 (EM 異色眼)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\EM異色眼同步者.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>暗</th>
+<th>魔法使族</th>
+<th>協調</th>
+<th>L2</th>
+<th>ATK 200</th>
+<th>DEF 600</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左6右6
+擺動效果：
+1回合1次，可以我方場上1體「EM」或是「異色眼」之名的怪獸為對象發動。
+此回合，該表側表示怪獸視為協調，等級變為1。
+
+怪獸效果：
+從額外牌組特殊召喚出場的此卡作為同步召喚使用的場合除外。
+(1)：
+此卡召喚成功時，可以我方墓地1體等級3以下的
+「EM」或是「異色眼」之名的怪獸為對象發動。
+該怪獸特殊召喚。
+以此效果特殊召喚的怪獸的效果無效化。
+(2)：
+1回合1次，可以我方擺動區域1張卡片為對象發動。
+該卡片效果無效並特殊召喚，僅以該卡片和此卡作為素材將1體同步怪獸同步召喚。
+</code></pre>
+<p>算上是廢件，只是抽上來不會跟七爺八爺一樣那麼幹。理想的上手情況是透過<a href="#dad">老爸</a>把他檢索上來。</p>
+<p>魔法效果偶爾可以把場上EM字段轉成1星協調，跟<a href="#astral">宙讀</a>變成槍管S龍。</p>
+<p>本身就是協調，怪獸效果則通常是拿來他P區的<a href="#discard_dragon">賤龍</a>做槍管S龍；或跟P區<a href="#oddeyes_fusionguy">異色眼融變者</a>做鮮花女爵。</p>
+<p>放1</p>
+<h4 id="oddeyes_fusionguy"><h4>
+<h4 id="em異色眼融變者-em-異色眼">EM異色眼融變者 (EM 異色眼)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\EM異色眼融變者.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>暗</th>
+<th>魔法使族</th>
+<th>L8</th>
+<th>ATK 2000</th>
+<th>DEF 2600</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左4右4
+擺動效果：
+1回合1次，我方主要階段時可以發動。
+從我方手札、場上將龍族融合怪獸卡上決定的融合素材怪獸送入墓地，從額外牌組將該1體融合怪獸融合召喚。
+怪獸效果：
+此卡名的(1)怪獸效果1回合僅能使用1次。
+(1)：
+我方的擺動怪獸和對手怪獸進行戰鬥的傷害步驟開始時可以發動。
+從手札將此卡特殊召喚，該我方怪獸不會被該次戰鬥破壞。
+(2)：
+我方主要階段時可以發動。
+從我方場上將包含此卡的融合怪獸卡上決定的融合素材怪獸送入墓地，從額外牌組將該1體融合怪獸融合召喚。
+此時，我方擺動區域存在的融合素材怪獸可以當作融合素材使用。　
+</code></pre>
+<p>有帶異色眼風雷龍的才會帶，不然一般不會帶，因為8星這副根本P不下來，刻度4極度爛。</p>
+<p>基本上本篇的Combo 會用到的就是先堆他下去再用魔皇后把他拉起來，並使用他的怪獸效果出風雷龍一擋。如果狀況允許(場面較好)，會直接用<a href="#dad">老爸</a>檢索他跟<a href="#egg">EM異色眼同步者</a>，在把他貼上P區發融合效果，使用手上的<a href="#egg">EM異色眼同步者</a>+其他P怪出風雷龍。</p>
+<p>擋戰破的效果就筆者而言蠻常用到的，後手把<a href="#joker">小丑</a>+<a href="purplepoison">紫毒</a>去撞人，順便把他跳出來打人，主二就先變風雷龍護航或是link成銀金/軌跡等。</p>
+<p>要放通常只放1，因為起手抽上來真的很卡。</p>
+<h3 id="龍-p-怪小系統">龍 P 怪小系統</h3>
+<h4 id="revolutionary"><h4>
+<h4 id="超天新龍-異色眼革命龍-異色眼">超天新龍-異色眼革命龍 (異色眼)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\超天新龍-異色眼革命龍.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>光</th>
+<th>龍族</th>
+<th>L12</th>
+<th>ATK ?</th>
+<th>DEF ?</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左12右12
+擺動效果：
+(1)：
+我方僅能擺動召喚龍族怪獸。
+此效果不會被無效化。
+(2)：
+可以我方墓地1體龍族的融合、同步、超量怪獸為對象發動。
+此卡破壞，該怪獸特殊召喚。
+
+怪獸效果：
+此卡不能通常召喚。
+僅能以從手札的擺動召喚，或是解放我方場上的龍族的融合、同步、超量怪獸各1體才能特殊召喚。
+(1)：
+可以從手札捨棄此卡，並支付500分生命值發動。
+從牌組將1體等級8以下的龍族擺動怪獸加入手札。
+(2)：
+此卡的攻擊力、守備力上升對手的生命值的一半數值。
+(3)：
+1回合1次，可以支付一半生命值發動。
+除此卡以外雙方場上、墓地的所有卡片返回持有者牌組。
+</code></pre>
+<p>魔法效果能復活墓地的龍 FSX，就是搶救本副牌的大怪們。
+可以把No.38 或是 風雷龍先拿去link 神弓，再用此效果復活他們，白嫖一擋。</p>
+<p>通常不會想召喚出來。
+怪獸效果通常是先丟到墓地檢索龍P 後，拿霸王紫眷龍複製使用，強力解場效果。</p>
+<p><s>有時候手牌不需要<a href="#honorP">榮光P</a> 的時候，這張被灰流蠻爽的，騙到一擋。</s></p>
+<p>本篇只放1，因為展開主力不是龍族，而且能被<a href="#joker">小丑</a>檢索上來。</p>
+<h4 id="honorP"><h4>
+<h4 id="龍劍士榮光擺動p-靈擺">龍劍士榮光擺動P (靈擺)</h4>
+<img src="file:///d:\YGOOCG_Deckintro\magician\main\龍劍士榮光擺動P.jpg" width="200"/>
+<table>
+<thead>
+<tr>
+<th>光</th>
+<th>龍族</th>
+<th>協調</th>
+<th>L4</th>
+<th>ATK 1850</th>
+<th>DEF 0</th>
+</tr>
+</thead>
+</table>
+<p>效果:</p>
+<pre><code>擺動刻度：左5右5
+擺動效果：
+1回合1次，我方另一邊的擺動區域有卡片存在的場合可以發動。
+該卡片破壞，從牌組將1張該卡片的同名卡片加入手牌。
+
+怪獸效果：
+不能以此卡作為素材，而將「龍劍士」以外的融合、同步、超量怪獸特殊召喚。　
+</code></pre>
+<p>魔陷效果先手可以拿來觸發<a href="#g_formation">綠陣</a>、<a href="#astral">宙讀</a>、<a href="#chorno">刻讀</a> 等來幫助展開；後手還可以使用他觸發<a href="#purplepoison">紫毒</a>來解場，強，目前限一。</p>
+<p>再大膽一點 (不怕灰) 可以用他炸<a href="#rainbow">虹彩</a> 撿 <a href="#format">陣</a>、炸<a href="#blacktooth">黑牙</a>復活暗魔法使。 ( 記住，刻度5 - 8 如果之後無法更換，基本上就形同自縊。做上述兩件事情不是很有把握不會被灰，就是已經走投無路了，doing this is the only way to play, QQQQQQ. )</p>
+<p>( 抱怨一下，筆者親身試驗，雖然看似很賺，但不知為何每次起手抽他上來伴隨他的其他人都無法跟他起化學效應 (甚麼兩張黑牙一張天空一張虹彩，崩潰)，對筆者而言是張衰小的卡片。 )</p>
+<p>本身帶有靈擺字段 (提醒一下，龍劍士/龍魔王許多下怪後綴都有帶個P字，但有很多種P，像是點火騎士、霧動機、威風等等，並不是都代表靈擺，要去看字母上面的拼音才知道)，加上因為超天的關係而可支援異色眼系統，讓他幾乎變成...<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>個本家 (差不能直接支援剩下兩個字段) ?</p>
+<p>(<code>SD31-based 魔術師</code> 的展開精神就是不斷的炸自己的刻度，所以榮光P的效果其實是符合魔術師本家運作的精神的)</p>
+<p>怪獸效果就副作用，只能做龍劍士的 F S X，不能做鮮花、槍管S、深潛、泥睡，在此副牌同步只能用來做暴龍劍士，廢。</p>
+<p><strong>上述兩張為小系統，有人選擇不放(我想是因為水機被禁止，榮光P失去身為協調的最後意義)，有人只放榮光P，有人放3超天1榮光，有人只放各一(筆者是各一)</strong></p>
+<h4 id="formation"> <h4>
+<h2 id="陣">陣</h2>
+</div>
+        </div>
+        <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+        
+    </body>
+    </html>
