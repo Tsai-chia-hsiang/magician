@@ -611,6 +611,7 @@
 
 放1
 
+
 <h4 id="oddeyes_fusionguy"><h4>
 
 #### EM異色眼融變者 (EM 異色眼)
